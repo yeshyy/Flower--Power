@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home – Flower Power!</title>
+<link rel="icon" type="image/png" href="flower-icon.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9f5;
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background-color: #88b396;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f7e9e3;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #d46a8c;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d46a8c;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .fact-box {
+      background-color: #fff7f9;
+      border-left: 5px solid #d46a8c;
+      padding: 15px;
+      margin-top: 20px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌸 Flower Power!</h1>
+    <p>Discover the true beauty and meaning behind flowers</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="importance.html">Importance</a>
+    <a href="botany.html">Botany</a>
+    <a href="signs&meanings.html">Signs & Meanings</a>
+    <a href="about.html">About</a>
+    <a href="funfacts.html">Fun Facts</a>
+  </nav>
+  <main>
+    <h2>🌷 The Power of Flowers:</h2>
+    <p style="font-size: 20px;">Flowers are more than just beautiful decorations — they are living symbols of nature’s intelligence and creativity. From the tiniest wild blooms to majestic tropical orchids, flowers are intricate systems designed for pollination, reproduction, and survival. Their colors, shapes, and fragrances have evolved over millions of years to attract specific pollinators, helping plants reproduce and ensuring ecosystems thrive. Every flower carries within it the miracle of life and connection between species.</p>
+
+    <p style="font-size: 20px;">Beyond biology, flowers hold deep cultural and emotional significance across the world. In different cultures, flowers are used to mark important life events: birth, marriage, love, grief, and remembrance. A single rose can say more than words, while a bouquet of lilies or tulips can offer comfort, hope, or celebration. Throughout history, flowers have inspired poetry, art, healing, and even resistance. They remind us of beauty in fleeting moments and the emotional language that lives beyond speech.</p>
+
+    <p style="font-size: 20px;">To truly understand the power of flowers is to explore both science and soul. They teach us about resilience — blooming in harsh environments, enduring storms, and returning with the seasons. They also remind us to pause, appreciate the present, and find meaning in everyday things. The deeper we look, the more we discover: flowers are not just part of nature — they are storytellers, healers, messengers, and timeless companions of the human spirit.</p>
+
+
+ <div class="fact-box" style="background-color: #fff7f9; border-left: 5px solid #88b396; padding: 15px; margin-top: 30px; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
+  🌼 <strong>Fun Fact:</strong> There are more than <strong>400,000 types of flowering plants</strong> on Earth — and scientists believe there are still thousands yet to be discovered!
+</div>
+
+  </main>
+<body>
+  <div id="random-flower" style="margin-top: 40px; text-align: center;">
+    <h3>🌼 Flower of the Day</h3>
+    <img id="flower-img" src="" alt="Random flower" width="300" height="200" style="border-radius: 10px;">
+    <p id="flower-name" style="font-size: 18px; font-weight: bold;"></p>
+    <p id="flower-meaning" style="font-size: 16px;"></p>
+  </div>
+
+  <script>
+    const flowers = [
+      {
+        name: "🌹 Rose – Love & Beauty",
+        meaning: "Roses symbolize romance, admiration, and passion. Red is for love, yellow for joy.",
+        image: "rose.jpg"
+      },
+      {
+        name: "🌻 Sunflower – Loyalty & Joy",
+        meaning: "Sunflowers turn toward the sun, symbolizing happiness, strength, and devotion.",
+        image: "sunflower.jpg"
+      },
+      {
+        name: "🌸 Peony – Honor & Affection",
+        meaning: "Peonies represent bashful love, prosperity, and respect in many cultures.",
+        image: "peonies.jpg"
+      },
+      {
+        name: "🌺 Camellia – Devotion & Grace",
+        meaning: "Often gifted to express admiration, Camellias are a symbol of faithfulness.",
+        image: "camellia.jpg"
+      },
+      {
+        name: "💜 Lavender – Calm & Healing",
+        meaning: "Lavender soothes the mind and soul. It represents serenity and wellness.",
+        image: "lavender.jpg"
+      },
+      {
+        name: "🌾 Kurinji – Rarity & Patience",
+        meaning: "Only blooms once every 12 years. Symbolizes a love worth waiting for.",
+        image: "kurinji.jpg"
+      },
+      {
+        name: "🤍 Lily of the Valley – Sweetness & Return of Happiness",
+        meaning: "This delicate flower symbolizes humility, purity, and the joy that comes after hardship.",
+        image: "lilyofthevalley.jpg"
+      },
+      {
+        name: "🕸️ Spider Lily – Mystery & Renewal",
+        meaning: "The spider lily’s unusual shape represents rebirth, final goodbyes, and memories.",
+        image: "spiderlily.jpg"
+      },
+      {
+        name: "🔥 Protea – Courage & Transformation",
+        meaning: "Proteas are ancient flowers symbolizing strength, diversity, and bold change.",
+        image: "protea.jpg"
+      },
+      {
+        name: "🦴 Ghost Orchid – Rarity & Elusiveness",
+        meaning: "Rare and hard to find, the ghost orchid symbolizes mystery and deep spiritual connection.",
+        image: "ghostorchid.jpg"
+      },
+      {
+        name: "🐦 Bird of Paradise – Freedom & Joy",
+        meaning: "This flower looks like a bird in flight and symbolizes paradise, success, and celebration.",
+        image: "birdofparadise.jpg"
+      },
+
+      {
+        name: "🍫 Chocolate Cosmos – Deep Affection",
+        meaning: "With a chocolate scent, this rare flower stands for intense love and passion.",
+        image: "chocolatecosmos.jpg"
+      },
+      {
+        name: "🩷 Bleeding Heart – Undying Love",
+        meaning: "Shaped like a heart with a drop, it represents unconditional and often unspoken love.",
+        image: "bleedingheart.jpg"
+      },
+      {
+        name: "🌀 Passionflower – Peace & Faith",
+        meaning: "A complex flower that symbolizes spiritual growth, inner calm, and sacrifice.",
+        image: "passionflower.jpg"
+      },
+      {
+        name: "🎨 Green Rose – New Beginnings & Balance",
+        meaning: "Rare green roses symbolize harmony, life, and fresh starts.",
+        image: "greenrose.jpg"
+      },
+      {
+        name: "🟣 Anemone – Protection & Hope",
+        meaning: "Anemones are windflowers that protect against ill wishes and symbolize hope through hardship.",
+        image: "anemone.jpg"
+      },
+{
+  name: "🌼 Daisy – Innocence & New Beginnings",
+  meaning: "Daisies represent purity, simplicity, and the joy of fresh starts. Often gifted to cheer someone up.",
+  image: "daisy.jpg"
+},
+{
+  name: "🌸 Hibiscus – Delicate Beauty & Youth",
+  meaning: "Hibiscus blooms symbolize femininity, youth, and tropical beauty. In some cultures, it also means hospitality.",
+  image: "hibiscus.jpg"
+},
+{
+  name: "🌺 Chrysanthemum – Loyalty & Longevity",
+  meaning: "In many Asian cultures, chrysanthemums represent a long, happy life and unwavering loyalty.",
+  image: "chrysanthemum.jpg"
+},
+{
+  name: "🌿 Orchid – Rarity & Strength",
+  meaning: "Orchids are exotic and elegant, symbolizing strength, refinement, and rare beauty.",
+  image: "orchid.jpg"
+},
+{
+  name: "🩷 Carnation – Love & Admiration",
+  meaning: "Carnations express love, fascination, and distinction. Pink for gratitude, red for deep love.",
+  image: "carnation.jpg"
+},
+{
+  name: "💜 Lilac – Nostalgia & First Love",
+  meaning: "Lilacs bring back memories of first loves and spring days. They symbolize youth and fondness.",
+  image: "lilac.jpg"
+},
+{
+  name: "🌄 Morning Glory – Affection & Renewal",
+  meaning: "These flowers bloom with the sunrise, symbolizing fresh hope and a fleeting but meaningful connection.",
+  image: "morningglory.jpg"
+},
+{
+  name: "🌺 Foxglove – Energy & Creativity",
+  meaning: "While beautiful, foxgloves carry both healing and poison in history — representing duality and artistic brilliance.",
+  image: "foxglove.jpg"
+},
+{
+  name: "🌸 Hydrangea – Gratitude & Understanding",
+  meaning: "Hydrangeas symbolize heartfelt emotions, apologies, and deep gratitude. They’re often given after reconciliation.",
+  image: "hydrangea.jpg"
+},
+{
+  name: "🌹 White Rose – Innocence & New Beginnings",
+  meaning: "White roses stand for new chapters, pure intentions, and remembrance.",
+  image: "whiterose.jpg"
+},
+{
+  name: "🧡 Marigold – Creativity & Positivity",
+  meaning: "Bright and bold, marigolds represent warmth, celebration, and spiritual connection.",
+  image: "marigold.jpg"
+},
+{
+  name: "🖤 Black Dahlia – Strength & Elegance",
+  meaning: "Symbolizes overcoming challenges with dignity and embracing one's own mysterious beauty.",
+  image: "blackdahlia.jpg"
+},
+{
+  name: "🌼 Forget-Me-Not – Remembrance & True Connection",
+  meaning: "A tiny but meaningful flower that says, 'You are always remembered.'",
+  image: "forgetmenot.jpg"
+},
+{
+  name: "🌙 Moonflower – Quiet Love & Dreams",
+  meaning: "Blooming only at night, moonflowers symbolize rare moments of peace and mystery.",
+  image: "moonflower.jpg"
+},
+{
+  name: "🌙 Evening Primrose – Silent Strength & Inner Healing",
+  meaning: "This yellow flower blooms at dusk and is known for emotional balance and quiet resilience. It symbolizes hidden strength and soft endurance.",
+  image: "eveningprimrose.jpg"
+},
+ {
+  name: "🐺 Wolfsbane – Danger & Protection",
+  meaning: "Beautiful but poisonous, wolfsbane symbolizes danger, transformation, and hidden power. Historically used in myths to ward off werewolves or enemies.",
+  image: "Wolfsbane.jpg"
+},
+ {
+  name: "🌿 Mandrake – Magic & Mystery",
+  meaning: "Mandrake has a long history in folklore, believed to have magical properties. It symbolizes mystery, protection, and powerful transformation.",
+  image: "mandrake.jpg"
+}     
+    ];
+
+    const random = Math.floor(Math.random() * flowers.length);
+    const chosen = flowers[random];
+
+    document.getElementById("flower-img").src = chosen.image;
+    document.getElementById("flower-name").textContent = chosen.name;
+    document.getElementById("flower-meaning").textContent = chosen.meaning;
+  </script>
+</body>
+
+  <footer>
+    <p>&copy; 2025 Flower Power | Designed with petals, peace, and purpose ✨</p>
+  </footer>
+</body>
+</html>
